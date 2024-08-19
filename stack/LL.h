@@ -27,6 +27,7 @@ typedef struct LinkedList
     */
     node_t *head;
     node_t *tail;
+    u32 top;
 
 }LinkedList_t;
 

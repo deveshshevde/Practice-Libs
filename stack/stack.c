@@ -14,7 +14,7 @@ void push( LinkedList_t* list ,int value)
 
 void pop(LinkedList_t* list , u32 counter){
     
-    if(counter == 0){
+    if(counter < 0){
         return;
     }
     DeleteNodeWithIndex(list, counter);

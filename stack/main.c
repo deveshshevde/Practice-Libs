@@ -11,10 +11,21 @@ int main(int argc, char const *argv[])
     LinkedList_t *list = CreateLinkedList();
 
     push(list, 1);
+    printf("%d\n", list->top);
     push(list, 2);
+    printf("%d\n", list->top);
     push(list, 3);
+    printf("%d\n", list->top);
 
-    pop(list,counter-1);
+    printf(" Top on the stack is %d\n", list->top);
+    pop(list,(--counter));
+    printf(" Top on the stack is %d\n", list->top);
+    pop(list,(--counter));
+    printf(" Top on the stack is %d\n", list->top);
+
+
+
+
  
 
 

@@ -52,7 +52,7 @@ void AppendToLinkedList(LinkedList_t* list, u32 data)
     newnode->Next = NULL;
     list->head = newnode;
     list->tail = newnode;
-
+    list->top = data;
    }
    else
    {
@@ -64,6 +64,7 @@ void AppendToLinkedList(LinkedList_t* list, u32 data)
     newnode->Next = NULL;
     list->tail->Next = newnode;
     list->tail = newnode;
+    list->top = data;
 
    }
 }
@@ -82,6 +83,7 @@ void AttachNodeWithIndex(LinkedList_t* list, const u32 index, const u32 data){
             newnode->Data = data;
             newnode->Next = iterator->Next;
             iterator->Next = newnode;
+            
             break;
         }
         iterator = iterator->Next;
@@ -100,6 +102,7 @@ void DeleteNodeWithIndex(LinkedList_t* list, const u32 index){
 
             node_t *temp = iterator->Next;
             iterator->Next = temp->Next;
+            list->top = iterator->Data;
             free(temp);
             break;
         }
