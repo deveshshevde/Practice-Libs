@@ -16,4 +16,7 @@ typedef struct  TreeNode
     struct TreeNode* leftTreeNode;
 }TreeNode_t;
 
-TreeNode_t* TreeStructure(void);
+TreeNode_t* CreateRoot(int root_Data);
+
+TreeNode_t* AddValueTotree(int data , TreeNode_t* root);
+

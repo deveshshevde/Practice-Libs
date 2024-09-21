@@ -1,6 +1,7 @@
 
 CC = gcc
-CFLAGS = -fsanitize=address -g  -Wall -Wextra -Werror
+CFLAGS = -fsanitize=address -g  -Wall 
+#-Wextra -Werror
 
 
 TARGET = tree
@@ -21,7 +22,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 	./tree
-	rm -f target *.o
+	# rm -f target *.o
 
 
 %.o: %.c $(DEPS)
